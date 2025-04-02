@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist To-Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen p-4 transition-colors duration-200">
+  <header class="max-w-3xl mx-auto mb-8">
+    <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4">
+      <img src="https://images.pexels.com/photos/3609554/pexels-photo-3609554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+           alt="Notebook" 
+           class="w-12 h-12 inline-block rounded-full mr-2">
+      Minimalist To-Do List
+    </h1>
+    <form id="taskForm" class="flex items-center">
+      <input type="text" 
+             id="newTask" 
+             placeholder="Add new task..." 
+             class="flex-1 p-3 mr-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+      <button type="submit" 
+              class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+        Add
+      </button>
+    </form>
+    <label class="flex items-center mt-4 cursor-pointer">
+      <span class="mr-2 text-gray-600 dark:text-gray-300">Dark Mode</span>
+      <input type="checkbox" id="darkModeToggle" class="hidden">
+      <div class="relative w-14 h-7 rounded-full bg-gray-300 dark:bg-gray-700">
+        <div class="w-6 h-6 bg-white rounded-full absolute left-1 top-0.5 transition-transform duration-300 dark:translate-x-7"></div>
+      </div>
+    </label>
+  </header>
+
+  <main class="max-w-3xl mx-auto">
+    <ul id="taskList" class="divide-y divide-gray-200 dark:divide-gray-800 mt-6"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
